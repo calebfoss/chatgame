@@ -1,0 +1,33 @@
+body {
+	font-family: 'Noto-sans', sans-serif;
+	background-color: lightgray;
+}
+h1 {
+	text-align: center;
+}
+div {
+	background-color: white;
+}
+input {
+	outline: none;
+	display: block;
+	width: 75%;
+	margin: auto;
+	font-size: 1.5em;
+}
+#chat {
+	display: block;
+	width: 75%;
+	margin: auto;
+	word-wrap: break-word;
+	height: 50vh; 
+	overflow: auto;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+#title {
+	height: 10vh;
+	margin-top: 2.5vh;
+	margin-left: auto;
+	margin-right: auto;
+}

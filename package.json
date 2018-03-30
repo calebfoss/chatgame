@@ -1,0 +1,21 @@
+{
+  "name": "imgame",
+  "version": "1.0.0",
+  "description": "im game using websockets",
+  "main": "IMgame.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "game",
+    "node",
+    "p5js"
+  ],
+  "author": "Caleb",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
+}
