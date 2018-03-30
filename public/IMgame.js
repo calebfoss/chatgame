@@ -2,7 +2,7 @@ var socket;
 var chat;
 var input;
 
-socket = io.connect('http://localhost:3000');
+socket = io.connect('http://chatgame-chatgame.a3c1.starter-us-west-1.openshiftapps.com:8080');
 socket.on('input', newInput);
 chat = document.getElementById("chat");
 input = document.getElementById("input");
