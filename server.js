@@ -20,14 +20,10 @@ function listen() {
 }
 
 app.use(express.static('public'));
-
-
-// WebSocket Portion
-// WebSockets work with the HTTP server
-var io = require('socket.io', {
-        transports: ['websocket']
-    })(http);
-var io = require('socket.io')(server);
+var socket = require('socket.io');
+var io = socket(server);
+// var io = require('socket.io')(server);
+// io.set('transports', ['websocket']);
 
 io.sockets.on('connection', newConnection);
 
