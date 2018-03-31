@@ -10,7 +10,7 @@ var app = express();
 
 // Set up the server
 // process.env.PORT is related to deploying on heroku
-var server = app.listen(8000, listen);
+var server = app.listen('http://chatgame-chatgame.a3c1.starter-us-west-1.openshiftapps.com:8000', listen);
 
 // This call back just tells us that the server has started
 function listen() {
