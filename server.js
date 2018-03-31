@@ -24,6 +24,9 @@ app.use(express.static('public'));
 
 // WebSocket Portion
 // WebSockets work with the HTTP server
+var io = require('socket.io', {
+        transports: ['websocket']
+    })(http);
 var io = require('socket.io')(server);
 
 io.sockets.on('connection', newConnection);
