@@ -1,9 +1,10 @@
 var socket;
 var chat;
 var input;
-var connString = config.protocol + config.domain + ':' + config.clientport;
-console.log("Websocket connection string:", connString, config.wsclientopts);
-socket = io.connect(connString, config.wsclientopts);
+// var connString = config.protocol + config.domain + ':' + config.clientport;
+// console.log("Websocket connection string:", connString, config.wsclientopts);
+// socket = io.connect('8000');
+socket = io.connect('http://localhost:8000');
 socket.on('input', newInput);
 chat = document.getElementById("chat");
 input = document.getElementById("input");
