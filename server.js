@@ -10,8 +10,7 @@ var app = express();
 
 // Set up the server
 // process.env.PORT is related to deploying on heroku
-var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8000, listen);
-console.log('Open shift port: '+process.env.OPENSHIFT_NODEJS_PORT);
+var server = app.listen(0.0.0.0, listen);
 
 // This call back just tells us that the server has started
 function listen() {
