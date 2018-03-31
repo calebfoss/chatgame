@@ -4,7 +4,7 @@ var input;
 // var connString = config.protocol + config.domain + ':' + config.clientport;
 // console.log("Websocket connection string:", connString, config.wsclientopts);
 // socket = io.connect('8000');
-socket = io.connect(8000);
+socket = io.connect('http://chatgame-chatgame.a3c1.starter-us-west-1.openshiftapps.com:8000');
 socket.on('input', newInput);
 chat = document.getElementById("chat");
 input = document.getElementById("input");
