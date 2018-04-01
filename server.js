@@ -3,7 +3,7 @@ var clients = [];
 var PlayerList = [];
 var ConvoList = [];
 var convoTime;
-var convoIndex;
+var convoIndex = 0;
 
 var express = require('express');
 // Create the app
@@ -60,7 +60,8 @@ function newConnection(socket){
 	function startPlay(){
 		shuffle(ConvoList);
 		io.sockets.emit('play', ConvoList[0]);
-		convoTime = 180;
+		convoTime = 10;
+		console.log(ConvoList);
 		sendTime();
 	}
 	function sendTime(){
@@ -70,14 +71,19 @@ function newConnection(socket){
 			setTimeout(function(){sendTime();}, 1000);
 		}
 		else{
+			console.log(convoIndex);
+			console.log(ConvoList);
 			convoIndex++;
 			if(convoIndex < ConvoList.length){
 				io.sockets.emit('newConvo', ConvoList[convoIndex]);
-				convoTime = 180;
+				convoTime = 10;
 				setTimeout(sendTime, 1000);
 			}
 			else{
 				io.sockets.emit('endChat');
+				PlayerList = [];
+				ConvoList = [];
+				convoIndex = 0;
 			}
 		}
 		
