@@ -60,7 +60,7 @@ function newConnection(socket){
 	function startPlay(){
 		shuffle(ConvoList);
 		io.sockets.emit('play', ConvoList[0]);
-		convoTime = 10;
+		convoTime = 180;
 		console.log(ConvoList);
 		sendTime();
 	}
@@ -76,7 +76,7 @@ function newConnection(socket){
 			convoIndex++;
 			if(convoIndex < ConvoList.length){
 				io.sockets.emit('newConvo', ConvoList[convoIndex]);
-				convoTime = 10;
+				convoTime = 180;
 				setTimeout(sendTime, 1000);
 			}
 			else{
